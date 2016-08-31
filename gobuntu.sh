@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Add the NODE source
 sudo curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
@@ -14,3 +16,8 @@ sudo ln -s /usr/bin/composer.phar /usr/bin/composer
 
 # Install a global Gulp
 sudo npm install --global gulp-cli
+
+if [ ! -f "/etc/vim/vimrc.local" ] && [ -z "$VIMAPPLIED" ]; then
+  sudo cat $DIR/vimrc.local >> /etc/vim/vimrc.local
+fi
+
