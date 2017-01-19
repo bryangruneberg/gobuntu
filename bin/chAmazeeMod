@@ -1,0 +1,10 @@
+#!/bin/bash
+EPID=`ps ax | grep chmod | grep Amazee | awk '{print $1}'`
+
+if [ -z "$EPID" ]; then
+  echo "Running chmod";
+  chmod a+w -R /home/bryan/Projects/Amazee/
+else
+  echo "An existing chmod is running"
+fi
+

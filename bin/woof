@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+  ls  ~/.mutt/ | grep account | awk -F "." '{print $2}'
+  exit;
+fi
+
+ACCT=$1
+FILE=~/.mutt/account.$ACCT
+
+if [ ! -f $FILE ]; then
+  ls  ~/.mutt/ | grep account | awk -F "." '{print $2}'
+  exit;
+fi
+
+mutt -F $FILE

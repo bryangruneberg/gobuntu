@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DIR='/opt/storage/resilio-sync/Journal'
+export TODAY=`date --date=$1 +%Y-%m-%d`
+export FILE=$DIR/$TODAY.md
+
+if [ ! -f $FILE ]; then
+  sudo cp $DIR/TEMPLATE $FILE
+  sudo sed -i "s/__DATE__/$TODAY/g" "$FILE"
+fi
+
+sudo vim $FILE
+sudo chown rslsync:rslsync $FILE

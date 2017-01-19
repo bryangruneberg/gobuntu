@@ -1,3 +1,5 @@
 # goBuntu
 
-I like my ubuntu like I like my whisky. Consistent and well configured.
+All the things I need
+
+Sensitive things are synced using resilio-sync between phone, laptop, and AWS server

@@ -1,0 +1,8 @@
+#!/bin/bash
+#alsactl store
+while true
+ do
+  alsactl restore &> /dev/null
+  echo "*"
+  sleep 0.4
+ done
