@@ -46,3 +46,7 @@ alias chcli="mdp /opt/storage/resilio-sync/Jots/Cheats/Console\ Cheats.md"
 alias chclie="sudo vi /opt/storage/resilio-sync/Jots/Cheats/Console\ Cheats.md; chcli"
 
 alias xo="xdg-open"
+
+alias notes="find /s/ | grep -e '\.md' | grep -v -e '\.sync' -e '\.md.s'"
+
+alias vid="vim -u ~/.vimrc-drupal"
